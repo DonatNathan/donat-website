@@ -1,3 +1,5 @@
+[![codecov](https://codecov.io/gh/DonatNathan/donat-website/graph/badge.svg?token=MS38GNITDU)](https://codecov.io/gh/DonatNathan/donat-website)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
