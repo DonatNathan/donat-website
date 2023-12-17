@@ -1,4 +1,4 @@
-[![codecov](https://codecov.io/gh/DonatNathan/donat-website/graph/badge.svg?token=MS38GNITDU)](https://codecov.io/gh/DonatNathan/donat-website)
+[![Coverage](https://codecov.io/gh/DonatNathan/donat-website/graph/badge.svg?token=MS38GNITDU)](https://codecov.io/gh/DonatNathan/donat-website)
 
 # Getting Started with Create React App
 
