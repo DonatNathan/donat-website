@@ -24,7 +24,6 @@ const Countdown = ({end}) => {
 
     return (
         <CountdownBlock>
-            <p>Deadline</p>
             <RemainingTime>{addZero(seconds)}</RemainingTime>
         </CountdownBlock>
     );

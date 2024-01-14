@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const CountdownBlock = styled.div`
-
 `;
 
 export const RemainingTime = styled.p`
