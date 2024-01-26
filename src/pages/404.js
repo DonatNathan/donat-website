@@ -1,6 +1,6 @@
 import React from "react";
 import { PageBody } from "../components/pages/PagesComp";
-import { ErrorContent, ErrorImage, LittleErrorMessage, MainErrorMessage } from "../components/pages/404";
+import { ErrorContent, ErrorImage, LittleErrorMessage, MainErrorMessage } from "../components/pages/404Comp";
 
 const Error404 = () => {
     return (
