@@ -1,10 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Title } from "../components/pages/PagesComp";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import { SocialIcon } from "react-social-icons";
-
-import { IoCalendarNumberOutline } from "react-icons/io5";
 
 const JobTaker = ({name, date}) => {
     return (
@@ -13,7 +11,7 @@ const JobTaker = ({name, date}) => {
                 <h3>{name}</h3>
                 <p>{date}</p>
             </Box>
-            <img src="/images/Junior-Conseil-Taker.png" width="30%" />
+            <img alt="Junior Conseil Taker logo" src="/images/Junior-Conseil-Taker.png" width="30%" />
         </Box>
     )
 }
@@ -26,12 +24,12 @@ const HomePage = () => {
             </Helmet>
             <Box sx={{background: 'linear-gradient(to bottom, #4884E8, #004AAD)', color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
                 <Box sx={{justifyContent: "center", display: "flex", flexDirection: "row"}}>
-                    <img src="/images/logo_white.png" width="15%" />
+                    <img alt="White Donat Logo" src="/images/logo_white.png" width="15%" />
                     <Title>Nathan Donat-Filliod</Title>
                 </Box>
                 <Box sx={{alignItems: "center", display: "flex", flexDirection: "column"}}>
                     <h2>Junior Conseil Taker</h2>
-                    <img src="/images/CNE_flag.jpg" width="70%" />
+                    <img alt="Junior Conseil Taker team" src="/images/CNE_flag.jpg" width="70%" />
                     <Box sx={{width: "70%", display: "flex", justifyContent: "space-around"}}>
                         <JobTaker name="Chargé d'Affaire" date="01/11/2022 - TODAY" />
                         <JobTaker name="Trésorier" date="07/05/2023 - 01/07/2024" />
