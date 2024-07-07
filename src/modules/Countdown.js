@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import { CountdownBlock, RemainingTime } from "../components/CountdownComp";
 
+function addZero(num) {
+    return num < 10 ? '0' + num : num;
+};
+
 const Countdown = ({end}) => {
     const [seconds, setSeconds] = useState(0);
 
@@ -18,10 +22,6 @@ const Countdown = ({end}) => {
         setInterval(() => getTimeUntil(end), 1000)
     }, [end]);
 
-    const addZero = (num) => {
-        return num < 10 ? '0' + num : num;
-    };
-
     return (
         <CountdownBlock>
             <RemainingTime>{addZero(seconds)}</RemainingTime>
@@ -29,4 +29,4 @@ const Countdown = ({end}) => {
     );
 };
 
-export default Countdown;
+export { Countdown, addZero };

@@ -4,6 +4,6 @@ export const CountdownBlock = styled.div`
 `;
 
 export const RemainingTime = styled.p`
-    text-align: center;
+    text-align: left;
     font-size: 30px;
 `;

@@ -1,5 +1,5 @@
 import React from "react";
-import Countdown from "../Countdown";
+import { Countdown } from "../Countdown";
 import { HeaderBlock } from "../../components/header/HeaderComp";
 
 const Header = () => {
