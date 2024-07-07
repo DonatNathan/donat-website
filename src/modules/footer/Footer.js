@@ -4,7 +4,7 @@ import { CopyrightText, FooterBlock } from "../../components/footer/FooterComp";
 const Footer = () => {
     return (
         <FooterBlock>
-            <img src="/images/logo_white.png" width="3%" />
+            <img alt="White Donat logo" src="/images/logo_white.png" width="3%" />
             <CopyrightText>© 2024 - Nathan Donat-Filliod</CopyrightText>
         </FooterBlock>
     );
