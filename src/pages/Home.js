@@ -1,34 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography, IconButton } from "@mui/material";
 import { SocialIcon } from "react-social-icons";
 import Footer from "../modules/footer/Footer";
-
-const JobTaker = ({name, date}) => {
-    return (
-        <Box sx={{height: "200px", borderRadius: "10%", backgroundColor: "#FFFFFF", color: "#004AAD", opacity: 0.8, padding: "2%", margin: "3%", textAlign: "center", width: "15%", ":hover": {opacity: 1}}}>
-            <Box sx={{height: "60%"}}>
-                <h3>{name}</h3>
-                <p>{date}</p>
-            </Box>
-            <img alt="Junior Conseil Taker logo" src="/images/Junior-Conseil-Taker.png" width="30%" />
-        </Box>
-    )
-}
-
-const TakerBlock = () => {
-    return (
-        <Box sx={{alignItems: "center", marginTop: "5%", display: "flex", flexDirection: "column", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
-            <h2>Junior Conseil Taker</h2>
-            <img alt="Junior Conseil Taker team" src="/images/CNE_flag.jpg" width="70%" />
-            <Box sx={{width: "70%", display: "flex", justifyContent: "space-around"}}>
-                <JobTaker name="Chargé d'Affaire" date="01/11/2022 - TODAY" />
-                <JobTaker name="Trésorier" date="07/05/2023 - 01/07/2024" />
-                <JobTaker name="Membre du Comité d'Orientation Stratégique" date="03/07/2024 - TODAY" />
-            </Box>
-        </Box>
-    )
-}
+import Header from "../modules/header/Header";
+import TakerBlock from "./Taker";
+import SoonBlock from "./Soon";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const ContactIconComponent = ({url}) => {
     return (
@@ -40,7 +18,7 @@ const ContactIconComponent = ({url}) => {
 
 const ContactBlock = () => {
     return (
-        <Box sx={{width: "90%", padding: "5%", alignItems: "center", display: "flex", flexDirection: "column", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
+        <Box sx={{width: "90%", paddingLeft: "5%", paddingRight: "5%", paddingBottom: "3%", paddingTop: "3%", alignItems: "center", display: "flex", flexDirection: "column", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
             <h2>Contact</h2>
             <Box sx={{display: "flex", justifyContent: "center"}}>
                 <ContactIconComponent url="https://www.linkedin.com/in/nathan-donat-filliod/" />
@@ -52,24 +30,71 @@ const ContactBlock = () => {
     )
 }
 
-const HeaderBlock = () => {
+const LittleImage = ({path, description}) => {
     return (
-        <Box sx={{width: "100%", position: "fixed", top: 0, justifyContent: "left", display: "flex", flexDirection: "row", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.9)"}}>
-            <img alt="White Donat Logo" src="/images/logo_white.png" width="5%" />
-            <Typography sx={{fontSize: "300%", fontWeight: "bold"}}>Donat</Typography>
+        <img alt={description} src={path} />
+    )
+}
+
+const SubPageBlock = ({title, value, setPageBlock, description}) => {
+
+    const onButtonClick = () => {
+        setPageBlock(value);
+    }
+
+    return (
+        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "auto", borderRadius: "10%", backgroundColor: "#FFFFFF", color: "#004AAD", opacity: 0.8, padding: "2%", marginTop: "3%", textAlign: "center", width: "15%", ":hover": {opacity: 1}}}>
+            <Typography sx={{fontWeight: "bold", fontSize: "200%", marginBottom: "5%"}}>{title}</Typography>
+            <Typography sx={{}}>{description}</Typography>
+            <LittleImage path={`images/${value}.jpg`} description={description} />
+            <Button onClick={onButtonClick} variant="contained" sx={{marginTop: "5%"}}>Voir</Button>
         </Box>
     )
 }
 
+const HomeBlock = ({setPageBlock}) => {
+    return (
+        <Box sx={{width: "100%", marginTop: "5%", display: "flex", justifyContent: "space-around", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
+            <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Junior Entreprise dans laquelle j'ai eu l'occasion d'occuper plusieurs postes pendant mes années d'études à Epitech." />
+            <SubPageBlock title="Dev" value="dev" setPageBlock={setPageBlock} description="Une présentation des projets dont je suis le plus fière, mélangeant de nombreux domaines différents." />
+            <SubPageBlock title="Passions" value="passion" setPageBlock={setPageBlock} description="Apprenez en un peu plus sur moi grâce à mes différentes passions : les pirates, les bateaux et l'océan en général !" />
+        </Box>
+    )
+}
+
+const MainBlock = ({pageBlock, setPageBlock}) => {
+
+    const arrowOnClick = () => {
+        setPageBlock("menu");
+    }
+
+    return (
+        <>
+            {pageBlock !== "menu" && <Box sx={{width: "100%", marginTop: "5%", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white"}}><ArrowBackIcon /></IconButton></Box>}
+            {
+                pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
+                pageBlock === "taker" ? <TakerBlock /> :
+                pageBlock === "dev" ? <SoonBlock /> :
+                pageBlock === "passion" ? <SoonBlock /> : <Box></Box>
+            }
+        </>
+    )
+}
+
 const HomePage = () => {
+
+    const [pageBlock, setPageBlock] = useState("menu");
+
+    console.log(pageBlock);
+
     return (
         <>
             <Helmet>
                 <title>Nathan Donat-Filliod</title>
             </Helmet>
             <Box sx={{background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover", color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
-                <HeaderBlock />
-                <TakerBlock />
+                <Header />
+                <MainBlock pageBlock={pageBlock} setPageBlock={setPageBlock} />
                 <ContactBlock />
                 <Footer />
             </Box>
