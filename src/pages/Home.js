@@ -70,7 +70,7 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
 
     return (
         <>
-            {pageBlock !== "menu" && <Box sx={{width: "100%", marginTop: "5%", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white"}}><ArrowBackIcon /></IconButton></Box>}
+            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", marginTop: "5%", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
             {
                 pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
                 pageBlock === "taker" ? <TakerBlock /> :
