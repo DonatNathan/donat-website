@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/Home";
 import Error404 from "./pages/404";
-import Footer from "./modules/footer/Footer";
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
 
           <Route path="/" element={<HomePage />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
   );
 }

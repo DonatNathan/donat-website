@@ -1,12 +1,12 @@
 import React from "react";
-import { CopyrightText, FooterBlock } from "../../components/footer/FooterComp";
+import { Box, Typography } from "@mui/material";
 
 const Footer = () => {
     return (
-        <FooterBlock>
+        <Box sx={{width: "90%", padding: "5%", display: "flex", justifyContent: "space-between", alignItems: "center", backgroundColor: "rgba(0, 0, 0, 0.9)"}}>
             <img alt="White Donat logo" src="/images/logo_white.png" width="3%" />
-            <CopyrightText>© 2024 - Nathan Donat-Filliod</CopyrightText>
-        </FooterBlock>
+            <Typography sx={{fontWeight: "bold"}}>© 2024 - Nathan Donat-Filliod</Typography>
+        </Box>
     );
 };
 
