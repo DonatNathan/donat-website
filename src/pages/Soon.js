@@ -3,7 +3,7 @@ import React from "react";
 
 const SoonBlock = () => {
     return (
-        <Box sx={{width: "100%", flex: "1 1 auto", alignItems: "center", display: "flex", flexDirection: "column", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
+        <Box sx={{height: "61vh", width: "100%", alignItems: "center", display: "flex", flexDirection: "column", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
             <img alt="Ship" src="images/soon_page.png" style={{width: "40%", minWidth: "300px"}} />
         </Box>
     )

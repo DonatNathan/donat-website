@@ -18,7 +18,7 @@ const ContactIconComponent = ({url}) => {
 
 const ContactBlock = () => {
     return (
-        <Box sx={{width: "90%", paddingLeft: "5%", paddingRight: "5%", paddingBottom: "3%", paddingTop: "3%", alignItems: "center", display: "flex", flexDirection: "column", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
+        <Box sx={{height: "15vh", width: "90%", paddingLeft: "5%", paddingRight: "5%", paddingBottom: "3%", paddingTop: "3%", alignItems: "center", display: "flex", flexDirection: "column", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
             <h2>Contact</h2>
             <Box sx={{display: "flex", justifyContent: "center"}}>
                 <ContactIconComponent url="https://www.linkedin.com/in/nathan-donat-filliod/" />
@@ -54,7 +54,7 @@ const SubPageBlock = ({title, value, setPageBlock, description}) => {
 
 const HomeBlock = ({setPageBlock}) => {
     return (
-        <Box sx={{width: "100%", marginTop: "80px", display: "flex", flexWrap: "wrap", justifyContent: "space-around", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
+        <Box sx={{width: "100%", marginTop: "10vh", display: "flex", flexWrap: "wrap", justifyContent: "space-around", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
             <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Junior Entreprise dans laquelle j'ai eu l'occasion d'occuper plusieurs postes pendant mes années d'études à Epitech." />
             <SubPageBlock title="Dev" value="dev" setPageBlock={setPageBlock} description="Une présentation des projets dont je suis le plus fière, mélangeant de nombreux domaines différents." />
             <SubPageBlock title="Passions" value="passion" setPageBlock={setPageBlock} description="Apprenez en un peu plus sur moi grâce à mes différentes passions : les pirates, les bateaux et l'océan en général !" />
@@ -70,8 +70,8 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
 
     return (
         <>
-            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", marginTop: "80px", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
-            <Box sx={{flex: 1, display: "flex", flexDirection: "column"}}>
+            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", marginTop: "10vh", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
+            <Box sx={{width: "100%", display: "flex", flexDirection: "column"}}>
                 {
                     pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
                     pageBlock === "taker" ? <TakerBlock /> :
