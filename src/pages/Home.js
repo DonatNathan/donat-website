@@ -32,7 +32,7 @@ const ContactBlock = () => {
 
 const LittleImage = ({path, description}) => {
     return (
-        <img alt={description} src={path} />
+        <img alt={description} src={path} width="90%" />
     )
 }
 
@@ -43,18 +43,18 @@ const SubPageBlock = ({title, value, setPageBlock, description}) => {
     }
 
     return (
-        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-between", height: "auto", borderRadius: "10%", backgroundColor: "#FFFFFF", color: "#004AAD", opacity: 0.8, padding: "2%", marginTop: "3%", textAlign: "center", width: "15%", ":hover": {opacity: 1}}}>
+        <Box sx={{margin: "5%", minWidth: 200, maxWidth: 500, display: "flex", flexGrow: 1, flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "auto", borderRadius: "20px", backgroundColor: "#FFFFFF", color: "#004AAD", opacity: 0.8, padding: "2%", textAlign: "center", width: "15%", ":hover": {opacity: 1}}}>
             <Typography sx={{fontWeight: "bold", fontSize: "200%", marginBottom: "5%"}}>{title}</Typography>
             <Typography sx={{}}>{description}</Typography>
             <LittleImage path={`images/${value}.jpg`} description={description} />
-            <Button onClick={onButtonClick} variant="contained" sx={{marginTop: "5%"}}>Voir</Button>
+            <Button onClick={onButtonClick} variant="contained" sx={{marginTop: "5%", width: "70%"}}>Voir</Button>
         </Box>
     )
 }
 
 const HomeBlock = ({setPageBlock}) => {
     return (
-        <Box sx={{width: "100%", marginTop: "5%", display: "flex", justifyContent: "space-around", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
+        <Box sx={{width: "100%", marginTop: "80px", display: "flex", flexWrap: "wrap", justifyContent: "space-around", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
             <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Junior Entreprise dans laquelle j'ai eu l'occasion d'occuper plusieurs postes pendant mes années d'études à Epitech." />
             <SubPageBlock title="Dev" value="dev" setPageBlock={setPageBlock} description="Une présentation des projets dont je suis le plus fière, mélangeant de nombreux domaines différents." />
             <SubPageBlock title="Passions" value="passion" setPageBlock={setPageBlock} description="Apprenez en un peu plus sur moi grâce à mes différentes passions : les pirates, les bateaux et l'océan en général !" />
@@ -70,13 +70,15 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
 
     return (
         <>
-            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", marginTop: "5%", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
-            {
-                pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
-                pageBlock === "taker" ? <TakerBlock /> :
-                pageBlock === "dev" ? <SoonBlock /> :
-                pageBlock === "passion" ? <SoonBlock /> : <Box></Box>
-            }
+            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", marginTop: "80px", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
+            <Box sx={{flex: 1, display: "flex", flexDirection: "column"}}>
+                {
+                    pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
+                    pageBlock === "taker" ? <TakerBlock /> :
+                    pageBlock === "dev" ? <SoonBlock /> :
+                    pageBlock === "passion" ? <SoonBlock /> : <Box></Box>
+                }
+            </Box>
         </>
     )
 }
@@ -85,14 +87,12 @@ const HomePage = () => {
 
     const [pageBlock, setPageBlock] = useState("menu");
 
-    console.log(pageBlock);
-
     return (
         <>
             <Helmet>
                 <title>Nathan Donat-Filliod</title>
             </Helmet>
-            <Box sx={{background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover", color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column"}}>
+            <Box sx={{height: "100%", background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover", color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column", flexFlow: "column"}}>
                 <Header />
                 <MainBlock pageBlock={pageBlock} setPageBlock={setPageBlock} />
                 <ContactBlock />
