@@ -7,6 +7,7 @@ import Header from "../modules/header/Header";
 import TakerBlock from "./Taker";
 import SoonBlock from "./Soon";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import DevBlock from "./Dev";
 
 const ContactIconComponent = ({url}) => {
     return (
@@ -55,7 +56,7 @@ const SubPageBlock = ({title, value, setPageBlock, description}) => {
 const HomeBlock = ({setPageBlock}) => {
     return (
         <Box sx={{width: "100%", display: "flex", flexWrap: "wrap", justifyContent: "space-around"}}>
-            <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Junior Entreprise dans laquelle j'ai eu l'occasion d'occuper plusieurs postes durant mes années d'études à Epitech." />
+            <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Découvrez la Junior dans laquelle j'ai eu l'occasion d'occuper plusieurs postes durant mes années d'études à Epitech." />
             <SubPageBlock title="Dev" value="dev" setPageBlock={setPageBlock} description="Une présentation des projets dont je suis le plus fière, mélangeant de nombreux domaines différents." />
             <SubPageBlock title="Passions" value="passion" setPageBlock={setPageBlock} description="Apprenez en un peu plus sur moi grâce à mes différentes passions : les pirates, les bateaux et l'océan en général !" />
         </Box>
@@ -75,7 +76,7 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
                 {
                     pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
                     pageBlock === "taker" ? <TakerBlock /> :
-                    pageBlock === "dev" ? <SoonBlock /> :
+                    pageBlock === "dev" ? <DevBlock /> :
                     pageBlock === "passion" ? <SoonBlock /> : <Box></Box>
                 }
             </Box>
@@ -86,7 +87,7 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
 const Me = () => {
     return (
         <Box sx={{border: "solid 5px white", borderRadius: "20px", margin: "2vh", marginTop: "20vh", display: "flex", flexWrap: "wrap", justifyContent: "space-around", alignItems: "center"}}>
-            <Typography sx={{fontSize: "20px", marginBottom: "2vh", textAlign: "center"}}>Enchanté, je m'appelle Nathan et je suis développeur.</Typography>
+            <Typography sx={{fontSize: "150%", marginBottom: "2vh", textAlign: "center", padding: "1vh"}}>Enchanté, je m'appelle Nathan et je suis développeur Freelance.<br />Une idée de projet ? Contactez-moi !</Typography>
             <img alt="Nathan Donat-Filliod" src="images/me-removebg.png" width="30%" />
         </Box>
     )

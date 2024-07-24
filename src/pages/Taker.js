@@ -16,8 +16,8 @@ const JobTaker = ({name, date}) => {
 const TakerBlock = () => {
     return (
         <Box sx={{alignItems: "center", display: "flex", flexDirection: "column"}}>
-            <h1>Junior Conseil Taker</h1>
-            <Typography sx={{width: "70%", textAlign: "center", margin: "10px"}}>
+            <Typography sx={{textAlign: "center", fontSize: "200%", fontWeight: "bold", margin: "1vh"}}>Junior Conseil Taker</Typography>
+            <Typography sx={{width: "70%", textAlign: "center", margin: "1vh", fontSize: "120%"}}>
                 Junior Conseil Taker est une association évoluant au sein de l’école d’informatique EPITECH. Son objectif premier est de compléter et 
                 prolonger l’enseignement théorique de ses membres par une expérience pratique tout en permettant de mettre en application les différents 
                 enseignements dispensés aux étudiants de l’école. La Junior offre à ses clients trois types de prestations : <b>développement</b>, <b>conseil</b> et <b>audit</b>.
