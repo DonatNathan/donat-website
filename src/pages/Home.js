@@ -43,7 +43,7 @@ const SubPageBlock = ({title, value, setPageBlock, description}) => {
     }
 
     return (
-        <Box sx={{margin: "5%", minWidth: 200, maxWidth: 500, display: "flex", flexGrow: 1, flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "auto", borderRadius: "20px", backgroundColor: "#FFFFFF", color: "#004AAD", opacity: 0.8, padding: "2%", textAlign: "center", width: "15%", ":hover": {opacity: 1}}}>
+        <Box sx={{margin: "5%", minWidth: 200, maxWidth: 500, display: "flex", flexGrow: 1, flexDirection: "column", alignItems: "center", justifyContent: "space-between", height: "auto", borderRadius: "20px", backgroundColor: "#FFFFFF", color: "#004AAD", padding: "2vh", textAlign: "center", width: "15%", ":hover": {opacity: 1}}}>
             <Typography sx={{fontWeight: "bold", fontSize: "200%", marginBottom: "5%"}}>{title}</Typography>
             <Typography sx={{}}>{description}</Typography>
             <LittleImage path={`images/${value}.jpg`} description={description} />
@@ -54,8 +54,8 @@ const SubPageBlock = ({title, value, setPageBlock, description}) => {
 
 const HomeBlock = ({setPageBlock}) => {
     return (
-        <Box sx={{width: "100%", marginTop: "10vh", display: "flex", flexWrap: "wrap", justifyContent: "space-around", backgroundColor: "rgba(0, 0, 0, 0.7)"}}>
-            <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Junior Entreprise dans laquelle j'ai eu l'occasion d'occuper plusieurs postes pendant mes années d'études à Epitech." />
+        <Box sx={{width: "100%", display: "flex", flexWrap: "wrap", justifyContent: "space-around"}}>
+            <SubPageBlock title="Taker" value="taker" setPageBlock={setPageBlock} description="Junior Entreprise dans laquelle j'ai eu l'occasion d'occuper plusieurs postes durant mes années d'études à Epitech." />
             <SubPageBlock title="Dev" value="dev" setPageBlock={setPageBlock} description="Une présentation des projets dont je suis le plus fière, mélangeant de nombreux domaines différents." />
             <SubPageBlock title="Passions" value="passion" setPageBlock={setPageBlock} description="Apprenez en un peu plus sur moi grâce à mes différentes passions : les pirates, les bateaux et l'océan en général !" />
         </Box>
@@ -70,7 +70,7 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
 
     return (
         <>
-            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", marginTop: "10vh", backgroundColor: "rgba(0, 0, 0, 0.7)", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
+            {pageBlock !== "menu" && <Box sx={{paddingTop: "1%", width: "100%", display: "flex", justifyContent: "center"}}><IconButton onClick={arrowOnClick} sx={{color: "white", backgroundColor: "rgba(255, 255, 255, 0.1)"}}><ArrowBackIcon /></IconButton></Box>}
             <Box sx={{width: "100%", display: "flex", flexDirection: "column"}}>
                 {
                     pageBlock === "menu" ? <HomeBlock setPageBlock={setPageBlock} /> : 
@@ -83,6 +83,15 @@ const MainBlock = ({pageBlock, setPageBlock}) => {
     )
 }
 
+const Me = () => {
+    return (
+        <Box sx={{border: "solid 5px white", borderRadius: "20px", margin: "2vh", marginTop: "20vh", display: "flex", flexWrap: "wrap", justifyContent: "space-around", alignItems: "center"}}>
+            <Typography sx={{fontSize: "20px", marginBottom: "2vh", textAlign: "center"}}>Enchanté, je m'appelle Nathan et je suis développeur.</Typography>
+            <img alt="Nathan Donat-Filliod" src="images/me-removebg.png" width="30%" />
+        </Box>
+    )
+}
+
 const HomePage = () => {
 
     const [pageBlock, setPageBlock] = useState("menu");
@@ -92,11 +101,14 @@ const HomePage = () => {
             <Helmet>
                 <title>Nathan Donat-Filliod</title>
             </Helmet>
-            <Box sx={{height: "100%", background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover", color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column", flexFlow: "column"}}>
-                <Header />
-                <MainBlock pageBlock={pageBlock} setPageBlock={setPageBlock} />
-                <ContactBlock />
-                <Footer />
+            <Box sx={{background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover"}}>
+                <Box sx={{height: "100%", backgroundColor: 'rgba(0,0,0,0.6)', color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column", flexFlow: "column"}}>
+                    <Header />
+                    <Me />
+                    <MainBlock pageBlock={pageBlock} setPageBlock={setPageBlock} />
+                    <ContactBlock />
+                    <Footer />
+                </Box>
             </Box>
         </>
     );
