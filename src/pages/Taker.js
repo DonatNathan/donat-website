@@ -1,5 +1,9 @@
 import React from "react";
 import { Box, Typography } from "@mui/material"
+import { Helmet } from "react-helmet";
+import Header from "../modules/header/Header";
+import Footer from "../modules/footer/Footer";
+import ContactBlock from "../modules/footer/Contact";
 
 const JobTaker = ({name, date}) => {
     return (
@@ -15,7 +19,7 @@ const JobTaker = ({name, date}) => {
 
 const TakerBlock = () => {
     return (
-        <Box sx={{alignItems: "center", display: "flex", flexDirection: "column"}}>
+        <Box sx={{alignItems: "center", display: "flex", flexDirection: "column", marginTop: "15vh"}}>
             <Typography sx={{textAlign: "center", fontSize: "200%", fontWeight: "bold", margin: "1vh"}}>Junior Conseil Taker</Typography>
             <Typography sx={{width: "70%", textAlign: "center", margin: "1vh", fontSize: "120%"}}>
                 Junior Conseil Taker est une association évoluant au sein de l’école d’informatique EPITECH. Son objectif premier est de compléter et 
@@ -34,4 +38,22 @@ const TakerBlock = () => {
     )
 }
 
-export default TakerBlock;
+const TakerPage = () => {
+    return (
+        <>
+            <Helmet>
+                <title>Taker - Donat</title>
+            </Helmet>
+            <Box sx={{background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover"}}>
+                <Box sx={{height: "100%", backgroundColor: 'rgba(0,0,0,0.6)', color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column", flexFlow: "column"}}>
+                    <Header />
+                    <TakerBlock />
+                    <ContactBlock />
+                    <Footer />
+                </Box>
+            </Box>
+        </>
+    );
+}
+
+export default TakerPage;

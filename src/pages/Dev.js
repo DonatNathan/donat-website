@@ -1,36 +1,27 @@
 import { Box, Typography } from "@mui/material";
 import React from "react";
+import { Helmet } from "react-helmet";
 import { SocialIcon } from "react-social-icons";
+import Header from "../modules/header/Header";
+import Footer from "../modules/footer/Footer";
+import ContactBlock from "../modules/footer/Contact";
 
 const Project = ({name, description, link, path, type}) => {
     return (
-        <>
-            {type === "left" ?
-                <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "space-around", margin: "5vh", border: "solid 3px white", borderRadius: "20px", padding: "1vh", backgroundColor: "rgba(255, 255, 255, 0.9)", color: "black"}}>
-                    <img alt="name" src={`images/${path}`} width="30%" />
-                    <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-around", width: "100vh", alignItems: "center", marginTop: "5vh", marginBottom: "5vh", textAlign: "center"}}>
-                        <Typography sx={{fontWeight: "bold", fontSize: "150%"}}>{name}</Typography>
-                        <Typography sx={{fontSize: "120%", margin: "5vh"}}>{description}</Typography>
-                        <SocialIcon url={link} />
-                    </Box>
-                </Box>
-                    :
-                <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "space-around", margin: "5vh", border: "solid 3px white", borderRadius: "20px", padding: "1vh", backgroundColor: "rgba(255, 255, 255, 0.9)", color: "black"}}>
-                    <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-around", width: "100vh", alignItems: "center", marginTop: "5vh", marginBottom: "5vh", textAlign: "center"}}>
-                        <Typography sx={{fontWeight: "bold", fontSize: "150%"}}>{name}</Typography>
-                        <Typography sx={{fontSize: "120%", margin: "5vh"}}>{description}</Typography>
-                        <SocialIcon url={link} />
-                    </Box>
-                    <img alt="name" src={`images/${path}`} width="30%" />
-                </Box>
-            }
-        </>
+        <Box sx={{minWidth: 200, maxWidth: 500, display: "flex", flexDirection: "column", justifyContent: "space-around", alignItems: "center", margin: "5vh", border: "solid 3px white", borderRadius: "20px", padding: "1vh", backgroundColor: "rgba(255, 255, 255, 0.9)", color: "black"}}>
+            <Box sx={{display: "flex", flexDirection: "column", justifyContent: "space-around", alignItems: "center", marginTop: "5vh", marginBottom: "5vh", textAlign: "center"}}>
+                <Typography sx={{fontWeight: "bold", fontSize: "150%"}}>{name}</Typography>
+                <Typography sx={{fontSize: "120%", margin: "5vh"}}>{description}</Typography>
+                <SocialIcon url={link} />
+            </Box>
+            <img alt={name} src={`images/${path}`} width="30%" />
+        </Box>
     )
 }
 
-const ProjetctsBlock = () => {
+const ProjectsBlock = () => {
     return (
-        <Box>
+        <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
             <Project name="Map Generator" description="Un algorithm simple permettant de générer une map 2D. Il est possible de changer la taille ainsi que la répartition de celle-ci. Plus le nombre d'itération est grand, plus la map est simpliste, l'utilisateur peut donc tester chaque itération jusqu'à ce qu'elle soit conforme à ses attentes. Il peut ensuite exporter la map sous la forme d'un fichier texte." link="https://github.com/DonatNathan/2D-map-generator" path="generator.png" type="right" />
             <Project name="Image Compressor" description="L'Image Compressor consite à compresser drastiquement une image en réduisant son nombre de couleur. Ce programme a été développé en Haskell et utilise l'algorithm appelé K-Means. Il est possible de choisir le nombre de couleurs de l'image ainsi que sa convergence." link="https://github.com/DonatNathan/image-compressor" path="image-compressor.png" type="left" />
             <Project name="Wolfram" description="Implémentation de l'algorithm de Stephen Wolfram fait en Haskell. Le résultat est alors affiché dans le terminal." link="https://github.com/DonatNathan/wolfram" path="wolfram.png" type="right" />
@@ -42,7 +33,7 @@ const ProjetctsBlock = () => {
 
 const DevBlock = () => {
     return (
-        <Box>
+        <Box sx={{marginTop: "15vh"}}>
             <Box sx={{alignItems: "center", display: "flex", flexDirection: "column"}}>
                 <Typography sx={{textAlign: "center", fontSize: "200%", fontWeight: "bold", margin: "1vh"}}>Projets</Typography>
                 <Typography sx={{width: "70%", textAlign: "center", margin: "1vh", fontSize: "120%"}}>
@@ -50,9 +41,27 @@ const DevBlock = () => {
                     projets personnels dont j'ai eu l'idée.
                 </Typography>
             </Box>
-            <ProjetctsBlock />
+            <ProjectsBlock />
         </Box>
     )
 }
 
-export default DevBlock;
+const DevPage = () => {
+    return (
+        <>
+            <Helmet>
+                <title>Projets - Donat</title>
+            </Helmet>
+            <Box sx={{background: 'rgba(0,0,0,0) url("images/water.jpg") fixed', backgroundSize: "cover"}}>
+                <Box sx={{height: "100%", backgroundColor: 'rgba(0,0,0,0.6)', color: "white", justifyContent: "center", alignItems: "center", display: "flex", flexDirection: "column", flexFlow: "column"}}>
+                    <Header />
+                    <DevBlock />
+                    <ContactBlock />
+                    <Footer />
+                </Box>
+            </Box>
+        </>
+    );
+}
+
+export default DevPage;
