@@ -20,19 +20,19 @@ const JobTaker = ({name, date}) => {
 const TakerBlock = () => {
     return (
         <Box sx={{alignItems: "center", display: "flex", flexDirection: "column", marginTop: "15vh"}}>
-            <Typography sx={{textAlign: "center", fontSize: "200%", fontWeight: "bold", margin: "1vh"}}>Junior Conseil Taker</Typography>
+            {/* <Typography sx={{textAlign: "center", fontSize: "200%", fontWeight: "bold", margin: "1vh"}}>Junior Conseil Taker</Typography>
             <Typography sx={{width: "70%", textAlign: "center", margin: "1vh", fontSize: "120%"}}>
                 Junior Conseil Taker est une association évoluant au sein de l’école d’informatique EPITECH. Son objectif premier est de compléter et 
                 prolonger l’enseignement théorique de ses membres par une expérience pratique tout en permettant de mettre en application les différents 
                 enseignements dispensés aux étudiants de l’école. La Junior offre à ses clients trois types de prestations : <b>développement</b>, <b>conseil</b> et <b>audit</b>.
             </Typography>
-            <Typography sx={{marginBottom: "30px"}}><a href="https://juniortaker.com/">En savoir plus.</a></Typography>
+            <Typography sx={{marginBottom: "30px"}}><a href="https://juniortaker.com/">En savoir plus.</a></Typography> */}
             <img alt="Junior Conseil Taker team" src="/images/taker-cne.jpg" width="70%" />
-            <Typography sx={{fontSize: "30px", marginTop: "50px", marginBottom: "10px", fontWeight: "bold"}}>Postes occupés :</Typography>
+            <Typography sx={{fontSize: "30px", marginTop: "50px", marginBottom: "10px", fontWeight: "bold"}}>Positions held:</Typography>
             <Box sx={{width: "70%", display: "flex", flexWrap: "wrap", justifyContent: "space-around"}}>
-                <JobTaker name="Chargé d'Affaire" date="01/11/2022 - TODAY" />
-                <JobTaker name="Trésorier" date="07/05/2023 - 01/07/2024" />
-                <JobTaker name="Membre du Comité d'Orientation Stratégique" date="03/07/2024 - TODAY" />
+                <JobTaker name="Project Manager" date="11/01/2022 - TODAY" />
+                <JobTaker name="Treasurer" date="05/07/2023 - 07/01/2024" />
+                <JobTaker name="Member of the Strategic Orientation Committee" date="07/03/2024 - TODAY" />
             </Box>
         </Box>
     )

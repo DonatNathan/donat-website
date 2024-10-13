@@ -22,11 +22,11 @@ const Project = ({name, description, link, path, type}) => {
 const ProjectsBlock = () => {
     return (
         <Box sx={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
-            <Project name="Map Generator" description="Un algorithm simple permettant de générer une map 2D. Il est possible de changer la taille ainsi que la répartition de celle-ci. Plus le nombre d'itération est grand, plus la map est simpliste, l'utilisateur peut donc tester chaque itération jusqu'à ce qu'elle soit conforme à ses attentes. Il peut ensuite exporter la map sous la forme d'un fichier texte." link="https://github.com/DonatNathan/2D-map-generator" path="generator.png" type="right" />
-            <Project name="Image Compressor" description="L'Image Compressor consite à compresser drastiquement une image en réduisant son nombre de couleur. Ce programme a été développé en Haskell et utilise l'algorithm appelé K-Means. Il est possible de choisir le nombre de couleurs de l'image ainsi que sa convergence." link="https://github.com/DonatNathan/image-compressor" path="image-compressor.png" type="left" />
-            <Project name="Wolfram" description="Implémentation de l'algorithm de Stephen Wolfram fait en Haskell. Le résultat est alors affiché dans le terminal." link="https://github.com/DonatNathan/wolfram" path="wolfram.png" type="right" />
-            <Project name="Game Of Life" description="Implémentation des règles du Jeu de la Vie, l'automate cellulaire imaginé par John Conway dans un terminal. D'autres variantes sont aussi disponibles comme Hight Life, Day&Night ou Life 34." link="https://github.com/DonatNathan/game-of-life" path="game-of-life.png" type="left" />
-            <Project name="RPG" description="Créer d'un jeux de type RPG grâce à la librairie CSFML du language C. Un éditeur de map est implémenté permettant aux joueurs de créer leur propre monde. Inventaire, objects, quêtes, colisions et combats, vous pourrez trouver tout ça dans ce petit jeu." link="https://github.com/DonatNathan/my-rpg" path="rpg.png" type="right" />
+            <Project name="Map Generator" description="A simple algorithm to generate a 2D map. It is possible to change the size and distribution of the map. The greater the number of iterations, the simpler the map, so the user can test each iteration until it meets his expectations. He can then export the map as a text file." link="https://github.com/DonatNathan/2D-map-generator" path="generator.png" type="right" />
+            <Project name="Image Compressor" description="Image Compressor consists of drastically compressing an image by reducing its number of colors. This program was developed in Haskell and uses the algorithm called K-Means. It is possible to choose the number of colors in the image as well as its convergence." link="https://github.com/DonatNathan/image-compressor" path="image-compressor.png" type="left" />
+            <Project name="Wolfram" description="Implementation of Stephen Wolfram's algorithm done in Haskell. The result is then displayed in the terminal." link="https://github.com/DonatNathan/wolfram" path="wolfram.png" type="right" />
+            <Project name="Game Of Life" description="Implementation of the rules of the Game of Life, the cellular automaton imagined by John Conway in a terminal. Other variants are also available like Hight Life, Day&Night or Life 34." link="https://github.com/DonatNathan/game-of-life" path="game-of-life.png" type="left" />
+            <Project name="RPG" description="Creation of an RPG type game using the CSFML library of the C language. A map editor is implemented allowing players to create their own world. Inventory, objects, quests, collisions and fights, you can find all that in this little game." link="https://github.com/DonatNathan/my-rpg" path="rpg.png" type="right" />
         </Box>
     )
 }
@@ -34,13 +34,13 @@ const ProjectsBlock = () => {
 const DevBlock = () => {
     return (
         <Box sx={{marginTop: "15vh"}}>
-            <Box sx={{alignItems: "center", display: "flex", flexDirection: "column"}}>
+            {/* <Box sx={{alignItems: "center", display: "flex", flexDirection: "column"}}>
                 <Typography sx={{textAlign: "center", fontSize: "200%", fontWeight: "bold", margin: "1vh"}}>Projets</Typography>
                 <Typography sx={{width: "70%", textAlign: "center", margin: "1vh", fontSize: "120%"}}>
                     Vous pouvez trouver ci-desssous quelques projets que j'ai pu réalisé, que ce soit au sein de mon parcours à Epitech ou encore des 
                     projets personnels dont j'ai eu l'idée.
                 </Typography>
-            </Box>
+            </Box> */}
             <ProjectsBlock />
         </Box>
     )
