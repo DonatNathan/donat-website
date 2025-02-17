@@ -7,6 +7,7 @@ import Services from "../components/Services";
 import Footer from "../modules/footer/Footer";
 import Header from "../modules/header/Header";
 import Introduction from "../components/Introduction";
+import Process from "../components/Process";
 
 const HomePage = () => {
     return (
@@ -17,6 +18,7 @@ const HomePage = () => {
             <Box>
                     <Header />
                     <Introduction />
+                    <Process />
                     <Portfolio />
                     <ProjectIdea />
                     <Services />
