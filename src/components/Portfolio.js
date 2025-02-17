@@ -8,7 +8,7 @@ const Project = ({type, name, description, path}) => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{width: "50vh", backgroundColor: theme.SecondBackgroundColor, borderRadius: "8px", margin: "10px"}}>
+        <Box sx={{width: "50vh", backgroundColor: theme.BackgroundColor, border: 2, borderRadius: "8px", margin: "10px", borderColor: theme.SecondBackgroundColor}}>
             <Box component="img" sx={{width: "100%", borderRadius: "8px", height: "250px", objectFit: "cover"}} alt={name} src={path} />
             <Box sx={{display: "flex", flexDirection: "column", textAlign: "left", padding: "30px"}}>
                 <Typography sx={{fontSize: 12, color: theme.SubTextColor}}>{type}</Typography>
@@ -25,7 +25,7 @@ const Portfolio = () => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", backgroundColor: theme.BackgroundColor, paddingTop: "100px", paddingBottom: "100px"}}>
+        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center", backgroundColor: theme.BackgroundColor, paddingTop: "80px", paddingBottom: "80px"}}>
             <Typography sx={{fontSize: 40, fontWeight: "bold", color: theme.BoldTextColor}}>Portfolio</Typography>
             <Typography sx={{fontSize: 15, color: theme.ClassicTextColor, marginBottom: "40px"}}>You can find some of the many projects I have been able to carry out since my beginnings in computer development.</Typography>
             <Box sx={{ display: "flex", flexWrap: 'wrap', justifyContent: "center" }}>
@@ -66,7 +66,7 @@ const Portfolio = () => {
                     path={"/images/generator.png"}
                 />
             </Box>
-            <Button sx={{width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "30px"}}>More Projects</Button>
+            <Button sx={{width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "50px"}}>More Projects</Button>
         </Box>
     );
 };

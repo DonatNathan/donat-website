@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { Box } from "@mui/material";
 import ProjectIdea from "../components/ProjectIdea";
 import Portfolio from "../components/Portfolio";
+import Services from "../components/Services";
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <Box>
                     <Portfolio />
                     <ProjectIdea />
+                    <Services />
             </Box>
         </>
     );
