@@ -14,7 +14,7 @@ const Project = ({type, name, description, path}) => {
                 <Typography sx={{fontSize: 12, color: theme.SubTextColor}}>{type}</Typography>
                 <Typography sx={{fontSize: 20, color: theme.BoldTextColor, fontWeight: "bold"}}>{name}</Typography>
                 <Typography sx={{fontSize: 15, color: theme.ClassicTextColor, marginTop: "15px", marginBottom: "15px"}}>{description}</Typography>
-                <Button variant="outlined" sx={{width: "fit-content", textTransform: "none"}}>Case Study <IoArrowForward /></Button>
+                <Button variant="outlined" sx={{width: "fit-content", textTransform: "none"}}>Case Study <IoArrowForward style={{marginLeft: "10px"}} /></Button>
             </Box>
         </Box>
     );

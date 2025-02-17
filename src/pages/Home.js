@@ -8,6 +8,7 @@ import Footer from "../modules/footer/Footer";
 import Header from "../modules/header/Header";
 import Introduction from "../components/Introduction";
 import Process from "../components/Process";
+import Contact from "../components/Contact";
 
 const HomePage = () => {
     return (
@@ -22,6 +23,7 @@ const HomePage = () => {
                     <Portfolio />
                     <ProjectIdea />
                     <Services />
+                    <Contact />
                     <Footer />
             </Box>
         </>

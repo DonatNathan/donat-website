@@ -20,7 +20,7 @@ const Footer = () => {
                 <Link sx={{color: theme.BackgroundColor, textDecoration: "none", margin: "10px"}}>Services</Link>
                 <Link sx={{color: theme.BackgroundColor, textDecoration: "none", margin: "10px"}}>Contact</Link>
             </Box>
-            <Typography sx={{fontSize: 15}}>Copyright © 2024 Donat.</Typography>
+            <Typography sx={{fontSize: 15}}>Copyright © 2025 Donat.</Typography>
         </Box>
     );
 };
