@@ -6,6 +6,7 @@ import Portfolio from "../components/Portfolio";
 import Services from "../components/Services";
 import Footer from "../modules/footer/Footer";
 import Header from "../modules/header/Header";
+import Introduction from "../components/Introduction";
 
 const HomePage = () => {
     return (
@@ -15,6 +16,7 @@ const HomePage = () => {
             </Helmet>
             <Box>
                     <Header />
+                    <Introduction />
                     <Portfolio />
                     <ProjectIdea />
                     <Services />
