@@ -38,7 +38,7 @@ const Contact = () => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: theme.BackgroundColor, paddingTop: "80px"}}>
+        <Box id="contact" sx={{display: "flex", justifyContent: "center", alignItems: "center", backgroundColor: theme.BackgroundColor, paddingTop: "80px"}}>
             <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", backgroundColor: theme.BackgroundColor, padding: "80px", boxShadow: `-20px -20px 20px ${theme.SecondBackgroundColor}, 20px -20px 20px ${theme.SecondBackgroundColor}`}}>
                 <Box sx={{display: "flex", flexDirection: "column", width: "50vh", textAlign: "left", justifyContent: "center"}}>
                     <Typography sx={{fontSize: 30, color: theme.BoldTextColor, fontWeight: "bold"}}>Let's discuss your Project</Typography>
@@ -82,7 +82,7 @@ const Contact = () => {
                             <TextField required id="subject" label="Subject" variant="standard" />
                         </Box>
                         <TextField required multiline id="message" label="Message" variant="standard" />
-                        <Button sx={{width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "50px"}}>Submit <IoSendOutline style={{marginLeft: "10px"}} size={20} /></Button>
+                        <Button sx={{":hover": {backgroundColor: theme.ClassicTextColor}, width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "50px"}}>Submit <IoSendOutline style={{marginLeft: "10px"}} size={20} /></Button>
                     </FormControl>
                 </Box>
             </Box>
