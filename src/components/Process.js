@@ -11,7 +11,7 @@ const Step = ({name, description, icon}) => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{height: "25vh", width: "25vh", backgroundColor: theme.BackgroundColor, display: "flex", flexDirection: "column", padding: "30px", justifyContent: "center", textAlign: "left", margin: "10px", borderRadius: "12px"}}>
+        <Box sx={{":hover": {boxShadow: `-5px -5px 5px ${theme.BackgroundColor}, 5px 5px 5px ${theme.BackgroundColor}, 5px -5px 5px ${theme.BackgroundColor}, -5px 5px 5px ${theme.BackgroundColor}`, transitionDuration: "0.8s"}, transitionDuration: "0.8s", height: "25vh", width: "25vh", backgroundColor: theme.BackgroundColor, display: "flex", flexDirection: "column", padding: "30px", justifyContent: "center", textAlign: "left", margin: "10px", borderRadius: "12px"}}>
             <Box sx={{width: "fit-content", padding: "20px", backgroundColor: theme.SecondBackgroundColor, borderRadius: "6px"}}>
                 {
                     icon === "development" ? 

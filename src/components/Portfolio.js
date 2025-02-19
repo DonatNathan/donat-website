@@ -8,7 +8,7 @@ const Project = ({type, name, description, path, link}) => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{width: "50vh", backgroundColor: theme.BackgroundColor, border: 2, borderRadius: "8px", margin: "10px", borderColor: theme.SecondBackgroundColor}}>
+        <Box sx={{":hover": {boxShadow: `-10px 10px 10px ${theme.SecondBackgroundColor}, 10px 10px 10px ${theme.SecondBackgroundColor}`, transitionDuration: "0.8s"}, transitionDuration: "0.8s", width: "50vh", backgroundColor: theme.BackgroundColor, border: 2, borderRadius: "8px", margin: "10px", borderColor: theme.SecondBackgroundColor}}>
             <Box component="img" sx={{width: "100%", borderRadius: "8px", height: "250px", objectFit: "cover"}} alt={name} src={path} />
             <Box sx={{display: "flex", flexDirection: "column", textAlign: "left", padding: "30px"}}>
                 <Typography sx={{fontSize: 12, color: theme.SubTextColor}}>{type}</Typography>

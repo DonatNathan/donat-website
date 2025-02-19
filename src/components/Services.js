@@ -7,7 +7,7 @@ const Service = ({name, description}) => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{backgroundColor: theme.BackgroundColor, textAlign: "left", padding: "10px", width: "50vh", borderLeft: 3, borderLeftColor: theme.MainColor, borderRadius: "6px", margin: "10px"}}>
+        <Box sx={{backgroundColor: theme.BackgroundColor, textAlign: "left", padding: "10px", width: "50vh", borderLeft: 3, ":hover": {borderLeftColor: theme.MainColor, transitionDuration: "0.8s"}, transitionDuration: "0.8s", borderLeftColor: theme.BackgroundColor, borderRadius: "6px", margin: "10px"}}>
             <Typography sx={{fontSize: 20, fontWeight: "bold", color: theme.BoldTextColor}}>{name}</Typography>
             <Typography sx={{fontSize: 15, color: theme.ClassicTextColor}}>{description}</Typography>
         </Box>
