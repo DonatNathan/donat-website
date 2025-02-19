@@ -1,19 +1,25 @@
-import { Box, Typography } from "@mui/material";
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Box, Button, Typography } from "@mui/material";
+import { HashLink as Link } from 'react-router-hash-link';
+import React, { useContext } from "react";
+import { ThemeContext } from "../../utils/themes/ThemeContext";
 
 const Header = () => {
-    const navigate = useNavigate();
-
-    const headerOnClick = () => {
-        navigate("/");
-    }
+    
+    const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{zIndex: 1, height: "10vh", width: "100%", position: "fixed", top: 0, boxShadow: "0 1px 10px white", display: "flex", justifyContent: "left", backgroundColor: "rgba(0, 0, 0, 1)", alignItems: "center"}}>
-            <Box onClick={headerOnClick} sx={{'&:hover': {cursor: "pointer"}, display: "flex", flexDirection: "row", alignItems: "center"}}>
-                <img alt="White Donat Logo" src="/images/logo_white.png" width="70px" />
-                <Typography sx={{fontSize: "300%", fontWeight: "bold"}}>Donat</Typography>
+        <Box id="home" sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", textAlign: "center", backgroundColor: theme.BackgroundColor, paddingTop: "20px", paddingBottom: "30px"}}>
+            <Box component={Link} to="#home" sx={{display: "flex", flexDirection: "row", alignItems: "center", textDecoration: "none"}}>
+                <Box component="img" sx={{width: 50}} alt="Black Logo Donat" src="/images/logo.png" />
+                <Typography sx={{fontSize: 30, fontWeight: "bold", color: theme.BoldTextColor}}>Donat</Typography>
+            </Box>
+            <Box sx={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+                {/* <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Home</Link> */}
+                <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>About</Link>
+                <Link to={"#process"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Process</Link>
+                <Link to={"#portfolio"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Portfolio</Link>
+                <Link to={"#services"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Services</Link>
+                <Button href="#contact" sx={{width: "fit-content", backgroundColor: theme.MainColor, ":hover": {backgroundColor: theme.ClassicTextColor}, ":visited": {color: theme.BackgroundColor}, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, margin: "15px"}}>Contact</Button>
             </Box>
         </Box>
     )
