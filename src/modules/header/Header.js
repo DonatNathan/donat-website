@@ -13,12 +13,12 @@ const Header = () => {
                 <Box component="img" sx={{width: 50}} alt="Black Logo Donat" src="/images/logo.png" />
                 <Typography sx={{fontSize: 30, fontWeight: "bold", color: theme.BoldTextColor}}>Donat</Typography>
             </Box>
-            <Box sx={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+            <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center"}}>
                 {/* <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Home</Link> */}
-                <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>About</Link>
-                <Link to={"#process"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Process</Link>
-                <Link to={"#portfolio"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Portfolio</Link>
-                <Link to={"#services"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Services</Link>
+                <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>About</Link>
+                <Link to={"#process"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Process</Link>
+                <Link to={"#portfolio"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Portfolio</Link>
+                <Link to={"#services"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Services</Link>
                 <Button href="#contact" sx={{width: "fit-content", backgroundColor: theme.MainColor, ":hover": {backgroundColor: theme.ClassicTextColor}, ":visited": {color: theme.BackgroundColor}, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, margin: "15px"}}>Contact</Button>
             </Box>
         </Box>

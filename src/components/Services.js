@@ -7,7 +7,7 @@ const Service = ({name, description}) => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{backgroundColor: theme.BackgroundColor, textAlign: "left", padding: "10px", width: "50vh", borderLeft: 3, ":hover": {borderLeftColor: theme.MainColor, transitionDuration: "0.8s"}, transitionDuration: "0.8s", borderLeftColor: theme.BackgroundColor, borderRadius: "6px", margin: "10px"}}>
+        <Box sx={{backgroundColor: theme.BackgroundColor, textAlign: "left", padding: "10px", width: "30vw", minWidth: "300px", borderLeft: 3, ":hover": {borderLeftColor: theme.MainColor, transitionDuration: "0.8s"}, transitionDuration: "0.8s", borderLeftColor: theme.BackgroundColor, borderRadius: "6px", margin: "10px"}}>
             <Typography sx={{fontSize: 20, fontWeight: "bold", color: theme.BoldTextColor}}>{name}</Typography>
             <Typography sx={{fontSize: 15, color: theme.ClassicTextColor}}>{description}</Typography>
         </Box>
@@ -20,7 +20,7 @@ const Services = () => {
 
     return (
         <Box id="services" sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", textAlign: "center", backgroundColor: theme.SecondBackgroundColor, paddingTop: "80px", paddingBottom: "80px"}}>
-            <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "left", textAlign: "left", width: "50vh", marginBottom: "30px"}}>
+            <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "left", textAlign: "left", width: "30vw", minWidth: "300px", marginBottom: "30px"}}>
                 <Typography sx={{fontSize: 40, fontWeight: "bold", color: theme.BoldTextColor}}>What I do?</Typography>
                 <Typography sx={{fontSize: 15, color: theme.ClassicTextColor, marginTop: "15px", marginBottom: "15px"}}>I offer comprehensive development services for any project like websites, mobile apps, software, and even video games. <br /><br />With a versatile skill set across platforms and technologies, I bring ideas to life with solutions tailored to your goals, ensuring seamless performance, engaging user experiences, and long-term success.</Typography>
                 <Button href="https://github.com/DonatNathan" sx={{width: "fit-content", backgroundColor: theme.MainColor, ":hover": {backgroundColor: theme.ClassicTextColor}, ":visited": {color: theme.BackgroundColor}, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "10px"}}>See what I did</Button>

@@ -17,14 +17,14 @@ const HomePage = () => {
                 <title>Nathan Donat-Filliod</title>
             </Helmet>
             <Box>
-                    <Header />
-                    <Introduction />
-                    <Process />
-                    <Portfolio />
-                    <ProjectIdea />
-                    <Services />
-                    <Contact />
-                    <Footer />
+                <Header />
+                <Introduction />
+                <Process />
+                <Portfolio />
+                <ProjectIdea />
+                <Services />
+                <Contact />
+                <Footer />
             </Box>
         </>
     );

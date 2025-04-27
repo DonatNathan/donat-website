@@ -8,12 +8,12 @@ const Footer = () => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", textAlign: "center", backgroundColor: theme.BoldTextColor, paddingTop: "200px", paddingBottom: "80px"}}>
+        <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", textAlign: "center", backgroundColor: theme.BoldTextColor, paddingTop: "100px", paddingBottom: "50px"}}>
             <Box component={Link} to={"#home"} sx={{display: "flex", flexDirection: "row", alignItems: "center", textDecoration: "none"}}>
                 <Box component="img" sx={{width: 50}} alt="White Logo Donat" src="/images/logo_white.png" />
                 <Typography sx={{fontSize: 30, fontWeight: "bold", color: theme.BackgroundColor}}>Donat</Typography>
             </Box>
-            <Box sx={{display: "flex", flexDirection: "row", alignItems: "center"}}>
+            <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "center", marginBottom: "30px", marginTop: "30px"}}>
                 {/* <Link to={"#home"} style={{color: theme.BackgroundColor, textDecoration: "none", margin: "10px"}}>Home</Link> */}
                 <Link to={"#home"} style={{color: theme.BackgroundColor, textDecoration: "none", margin: "10px"}}>About</Link>
                 <Link to={"#process"} style={{color: theme.BackgroundColor, textDecoration: "none", margin: "10px"}}>Process</Link>

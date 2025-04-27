@@ -36,7 +36,7 @@ const Process = () => {
 
     return (
         <Box id="process" sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", backgroundColor: theme.SecondBackgroundColor, paddingTop: "80px", paddingBottom: "80px"}}>
-            <Box sx={{width: "50vh", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "left"}}>
+            <Box sx={{width: "30vw", minWidth: "300px", display: "flex", flexDirection: "column", justifyContent: "center", textAlign: "left"}}>
                 <Typography sx={{fontSize: 40, color: theme.BoldTextColor, fontWeight: "bold"}}>Work Process</Typography>
                 <Typography sx={{fontSize: 15, color: theme.ClassicTextColor, marginTop: "10px", marginBottom: "20px"}}>In my process, I focus on understanding your vision, planning strategically, and delivering results. <br /><br />From initial brainstorming to design, development, and testing, I work closely with you at each stage to ensure the project aligns with your goals. <br /><br />I emphasize transparency, adaptability, and quality, so you stay informed, and your solution is built to succeed.</Typography>
             </Box>
