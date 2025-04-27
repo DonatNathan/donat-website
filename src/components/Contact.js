@@ -38,7 +38,7 @@ const Contact = () => {
     const {theme} = useContext(ThemeContext);
 
     return (
-        <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", backgroundColor: theme.BackgroundColor, padding: "80px", boxShadow: `-20px -20px 20px ${theme.SecondBackgroundColor}, 20px -20px 20px ${theme.SecondBackgroundColor}`}}>
+        <Box id="contact" sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", justifyContent: "space-around", alignItems: "center", backgroundColor: theme.BackgroundColor, padding: "80px", boxShadow: `-20px -20px 20px ${theme.SecondBackgroundColor}, 20px -20px 20px ${theme.SecondBackgroundColor}`}}>
             <Box sx={{display: "flex", flexDirection: "column", width: "30vw", minWidth: "300px", textAlign: "left", justifyContent: "center"}}>
                 <Typography sx={{fontSize: 30, color: theme.BoldTextColor, fontWeight: "bold"}}>Let's discuss your Project</Typography>
                 <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", marginTop: "20px"}}>
