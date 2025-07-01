@@ -1,7 +1,6 @@
-import { Box, Button, FormControl, TextField, Typography } from "@mui/material"
+import { Box, Typography } from "@mui/material"
 import { ThemeContext } from "../utils/themes/ThemeContext";
 import { useContext } from "react";
-import { IoSendOutline } from "react-icons/io5";
 import { IoLocationOutline } from "react-icons/io5";
 import { IoMailOutline } from "react-icons/io5";
 import { IoCallOutline } from "react-icons/io5";
@@ -70,20 +69,7 @@ const Contact = () => {
                     </a>
                 </Box>
             </Box>
-            <Box sx={{display: "flex", flexDirection: "column", width: "30vw", minWidth: "300px", textAlign: "left", justifyContent: "center"}}>
-                <Typography sx={{fontSize: 15, color: theme.SubTextColor, marginBottom: "20px"}}>Describe your project as best you can and I will send you a quote for its completion.</Typography>
-                <FormControl>
-                    <TextField required id="name" label="Name" variant="standard" />
-                    <TextField required id="email" label="Email" variant="standard" />
-                    <TextField id="location" label="Location" variant="standard" />
-                    <Box sx={{display: "flex", flexDirection: "row", justifyContent: "space-between"}}>
-                        <TextField required id="budget" label="Budget" variant="standard" />
-                        <TextField required id="subject" label="Subject" variant="standard" />
-                    </Box>
-                    <TextField required multiline id="message" label="Message" variant="standard" />
-                    <Button sx={{":hover": {backgroundColor: theme.ClassicTextColor}, width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "50px"}}>Submit <IoSendOutline style={{marginLeft: "10px"}} size={20} /></Button>
-                </FormControl>
-            </Box>
+            <Box component="img" sx={{width: 100, marginTop: "50px"}} alt="Black Logo Donat" src="/images/logo.png" />
         </Box>
     );
 };
