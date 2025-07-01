@@ -19,7 +19,7 @@ const Header = () => {
                 <Link to={"#process"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Process</Link>
                 <Link to={"#portfolio"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Portfolio</Link>
                 <Link to={"#services"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Services</Link>
-                <Button href="#contact" sx={{width: "fit-content", backgroundColor: theme.MainColor, ":hover": {backgroundColor: theme.ClassicTextColor}, ":visited": {color: theme.BackgroundColor}, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, margin: "15px"}}>Contact</Button>
+                <Button href="#contact" style={{width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, margin: "15px"}}>Contact</Button>
             </Box>
         </Box>
     )
