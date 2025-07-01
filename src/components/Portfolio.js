@@ -72,7 +72,7 @@ const Portfolio = () => {
                     link={"https://github.com/DonatNathan/2D-map-generator"}
                 />
             </Box>
-            <Button href="https://github.com/DonatNathan" sx={{width: "fit-content", backgroundColor: theme.MainColor, ":hover": {backgroundColor: theme.ClassicTextColor}, ":visited": {color: theme.BackgroundColor}, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "50px"}}>More Projects</Button>
+            <Button href="https://github.com/DonatNathan" style={{width: "fit-content", backgroundColor: theme.MainColor, color: theme.BackgroundColor, textTransform: "none", fontSize: 15, marginTop: "50px"}}>More Projects</Button>
         </Box>
     );
 };

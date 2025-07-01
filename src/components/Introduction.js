@@ -23,7 +23,7 @@ const Introduction = () => {
             <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", width: "40vw", minWidth: "300px"}}>
                 <Typography sx={{fontSize: 50, color: theme.BoldTextColor, fontWeight: "bold"}}>Hello,<br /> I'm Nathan Donat-Filliod</Typography>
                 <Typography sx={{fontSize: 15, color: theme.ClassicTextColor, marginTop: "10px", marginBottom: "20px"}}>I'm a Freelance Developer based in Lyon, France. I spend my free time doing projects that I find interesting.<br /> Why not yours?</Typography>
-                <Button href="#contact" sx={{width: "fit-content", textTransform: "none", backgroundColor: theme.MainColor, ":hover": {backgroundColor: theme.ClassicTextColor}, ":visited": {color: theme.BackgroundColor}, color: theme.BackgroundColor, fontSize: 15}}>Contact me</Button>
+                <Button href="#contact" style={{width: "fit-content", textTransform: "none", backgroundColor: theme.MainColor, color: theme.BackgroundColor, fontSize: 15}}>Contact me</Button>
                 <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", marginTop: "50px", marginBottom: "50px", alignItems: "center"}}>
                     <Stat
                         main={"4 Y."}
