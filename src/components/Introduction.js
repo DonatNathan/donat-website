@@ -44,8 +44,8 @@ const Introduction = () => {
     }, []);
 
     return (
-        <Box sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor: theme.BackgroundColor, minHeight: "100vh"}}>
-            <Typography sx={{fontSize: 40, color: theme.BoldTextColor, textDecoration: 'underline', fontWeight: "bold", fontFamily: "'Magda Clean Mono', monospace"}}>{sentences[currentSentence]}</Typography>
+        <Box id="home" sx={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", backgroundColor: theme.BackgroundColor, paddingTop: "120px", minHeight: "calc(100vh - 120px)"}}>
+            <Typography sx={{fontSize: 40, color: theme.BoldTextColor, textDecoration: 'underline', textUnderlineOffset: '10px', marginBottom: "10px", fontWeight: "bold", fontFamily: "'Magda Clean Mono', monospace"}}>{sentences[currentSentence]}</Typography>
             <BlinkingTriangle color={theme.MainColor} />
         </Box>
     );

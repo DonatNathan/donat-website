@@ -17,7 +17,7 @@ code {
     monospace;
 }
  
-a:link {color: #01afe7;}  
-a:visited {color: #004AAD}  
-a:hover {color: #ced2d2}  
-a:active {color: #C0F0FC}
+a:not(.MuiButton-root):link {color: #01afe7;}  
+a:not(.MuiButton-root):visited {color: #004AAD}  
+a:not(.MuiButton-root):hover {color: #ced2d2}  
+a:not(.MuiButton-root):active {color: #C0F0FC}
