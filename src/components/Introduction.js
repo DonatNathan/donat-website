@@ -3,6 +3,21 @@ import { ThemeContext } from "../utils/themes/ThemeContext";
 import { Box, Typography } from "@mui/material";
 import styled from 'styled-components';
 
+const sentences = [
+    "HI",
+    "I",
+    "AM",
+    "NATHAN",
+    "WHAT",
+    "CAN",
+    "I",
+    "BUILD",
+    "FOR",
+    "YOU",
+    "TODAY",
+    "?"
+];
+
 const BlinkingTriangle = styled.div`
   width: 0;
   height: 0;
@@ -19,20 +34,6 @@ const BlinkingTriangle = styled.div`
 
 const Introduction = () => {
     const {theme} = useContext(ThemeContext);
-    const sentences = [
-        "HI",
-        "I",
-        "AM",
-        "NATHAN",
-        "WHAT",
-        "CAN",
-        "I",
-        "BUILD",
-        "FOR",
-        "YOU",
-        "TODAY",
-        "?"
-    ];
     const [currentSentence, setCurrentSentence] = useState(0);
 
     useEffect(() => {
