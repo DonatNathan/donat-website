@@ -54,7 +54,7 @@ const Footer = () => {
                 <FooterLink to={"#contact"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Contact</FooterLink>
             </Box>
             
-            <Typography sx={{fontSize: 13, color: theme.SubTextColor}}>Copyright © 2025 Nathan Donat-Filliod. All rights reserved.</Typography>
+            <Typography sx={{fontSize: 13, color: theme.SubTextColor}}>Copyright © 2026 Nathan Donat-Filliod. All rights reserved.</Typography>
         </Box>
     );
 };
