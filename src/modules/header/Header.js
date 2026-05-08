@@ -45,10 +45,9 @@ const Header = () => {
             <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center"}}>
                 <Box sx={{display: {xs: "none", md: "flex"}, flexWrap: "wrap", flexDirection: "row", alignItems: "center"}}>
                     {/* <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Home</Link> */}
-                    <HeaderLink to={"#home"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>About</HeaderLink>
-                    <HeaderLink to={"#process"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Process</HeaderLink>
-                    <HeaderLink to={"#portfolio"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Portfolio</HeaderLink>
+                    <HeaderLink to={"#home"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Home</HeaderLink>
                     <HeaderLink to={"#services"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Services</HeaderLink>
+                    <HeaderLink to={"#foundry-project-0"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Projects</HeaderLink>
                 </Box>
                 <Button onClick={toggleTheme} style={{backgroundColor: "transparent", color: theme.BoldTextColor, textTransform: "none", fontSize: 15, margin: "10px", minWidth: "auto", padding: "8px"}}>
                     {theme === themes.dark ? <IoMdSunny size={20} /> : <IoMdMoon size={20} />}

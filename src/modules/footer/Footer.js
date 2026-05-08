@@ -48,9 +48,9 @@ const Footer = () => {
             </Box>
             
             <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center", justifyContent: "center", marginBottom: "30px"}}>
-                <FooterLink to={"#home"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>About</FooterLink>
-                <FooterLink to={"#portfolio"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Portfolio</FooterLink>
+                <FooterLink to={"#home"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Home</FooterLink>
                 <FooterLink to={"#services"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Services</FooterLink>
+                <FooterLink to={"#foundry-project-0"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Projects</FooterLink>
                 <FooterLink to={"#contact"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Contact</FooterLink>
             </Box>
             
