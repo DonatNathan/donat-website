@@ -7,15 +7,15 @@ const themes = {
         BoldTextColor: '#132238',
         ClassicTextColor: '#556070',
         SubTextColor: '#87909D',
-        MainColor: '#4884E8',
+        MainColor: '#EE0000',
     },
     dark: {
-        BackgroundColor: '#FFFFFF', 
-        SecondBackgroundColor: '#F0F1F3',
-        BoldTextColor: '#132238',
-        ClassicTextColor: '#556070',
-        SubTextColor: '#87909D',
-        MainColor: '#4884E8',
+        BackgroundColor: '#000000', 
+        SecondBackgroundColor: '#111111',
+        BoldTextColor: '#FFFFFF',
+        ClassicTextColor: '#CCCCCC',
+        SubTextColor: '#888888',
+        MainColor: '#EE0000',
     },
 };
 
