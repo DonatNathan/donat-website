@@ -1,9 +1,37 @@
 import { Box, Button, Typography } from "@mui/material";
+import styled from 'styled-components';
 import { HashLink as Link } from 'react-router-hash-link';
 import React, { useContext } from "react";
 import { ThemeContext, themes } from "../../utils/themes/ThemeContext";
 import { IoMdSunny, IoMdMoon } from 'react-icons/io';
 
+const HeaderLink = styled(Link)`
+    color: ${props => props.textColor} !important;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: ${props => props.accentColor};
+        transition: width 0.3s ease;
+    }
+
+    &:hover {
+        color: ${props => props.textColor} !important;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+`;
 const Header = () => {
     
     const {theme, toggleTheme} = useContext(ThemeContext);
@@ -17,10 +45,10 @@ const Header = () => {
             <Box sx={{display: "flex", flexWrap: "wrap", flexDirection: "row", alignItems: "center"}}>
                 <Box sx={{display: {xs: "none", md: "flex"}, flexWrap: "wrap", flexDirection: "row", alignItems: "center"}}>
                     {/* <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "15px"}}>Home</Link> */}
-                    <Link to={"#home"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>About</Link>
-                    <Link to={"#process"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Process</Link>
-                    <Link to={"#portfolio"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Portfolio</Link>
-                    <Link to={"#services"} style={{color: theme.BoldTextColor, textDecoration: "none", margin: "10px"}}>Services</Link>
+                    <HeaderLink to={"#home"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>About</HeaderLink>
+                    <HeaderLink to={"#process"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Process</HeaderLink>
+                    <HeaderLink to={"#portfolio"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Portfolio</HeaderLink>
+                    <HeaderLink to={"#services"} textColor={theme.BoldTextColor} accentColor={theme.MainColor}>Services</HeaderLink>
                 </Box>
                 <Button onClick={toggleTheme} style={{backgroundColor: "transparent", color: theme.BoldTextColor, textTransform: "none", fontSize: 15, margin: "10px", minWidth: "auto", padding: "8px"}}>
                     {theme === themes.dark ? <IoMdSunny size={20} /> : <IoMdMoon size={20} />}
